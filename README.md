@@ -4,10 +4,10 @@
 
 ### A Java-based hotel reservation system designed with object-oriented principles and date-aware booking logic.
 
-![Java](https://img.shields.io/badge/Java-24-orange?style=for-the-badge&logo=openjdk&logoColor=white)
-![OOP](https://img.shields.io/badge/Design-Object--Oriented-blue?style=for-the-badge)
-![CLI](https://img.shields.io/badge/Interface-CLI-purple?style=for-the-badge)
-![Status](https://img.shields.io/badge/Status-Completed-brightgreen?style=for-the-badge)
+<img src="https://img.shields.io/badge/Java-24-orange?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java">
+<img src="https://img.shields.io/badge/Design-Object--Oriented-blue?style=for-the-badge" alt="OOP">
+<img src="https://img.shields.io/badge/Interface-CLI-purple?style=for-the-badge" alt="CLI">
+<img src="https://img.shields.io/badge/Status-Completed-brightgreen?style=for-the-badge" alt="Status">
 
 </div>
 
