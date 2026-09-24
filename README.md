@@ -50,15 +50,37 @@ The project focuses on applying **object-oriented design to a real-world booking
 
 ---
 
-## 🧠 Core Booking Logic
+## 🏗️ System Architecture
 
-One of the important parts of the system is **date-based room availability**.
-
-A room cannot be booked if the requested dates overlap with an existing active booking.
-
-The overlap condition is:
+The system is organized around the main entities involved in a hotel reservation workflow.
 
 ```text
-checkIn < existingCheckOut
-AND
-checkOut > existingCheckIn
+                         ┌─────────────────┐
+                         │   HotelChain    │
+                         └────────┬────────┘
+                                  │
+                                  ▼
+                         ┌─────────────────┐
+                         │      Hotel      │
+                         └────────┬────────┘
+                                  │
+                                  ▼
+                         ┌─────────────────┐
+                         │      Room       │
+                         └────────┬────────┘
+                                  │
+                                  ▼
+                         ┌─────────────────┐
+                         │     Booking     │
+                         └───────┬─┬───────┘
+                                 │ │
+                   ┌─────────────┘ └─────────────┐
+                   ▼                             ▼
+            ┌─────────────┐               ┌─────────────┐
+            │   Payment   │               │   Voucher   │
+            └──────┬──────┘               └─────────────┘
+                   │
+                   ▼
+            ┌─────────────┐
+            │   Refund    │
+            └─────────────┘
