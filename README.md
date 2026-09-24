@@ -2,35 +2,63 @@
 
 # 🏨 Hotel Booking System
 
-### A Java-based hotel reservation system built around object-oriented design, date-aware availability, booking workflows, payments, cancellations, and refunds.
+### A Java-based hotel reservation system designed with object-oriented principles and real-world booking logic.
 
 ![Java](https://img.shields.io/badge/Java-24-orange?style=for-the-badge&logo=openjdk&logoColor=white)
-![OOP](https://img.shields.io/badge/OOP-Object--Oriented-blue?style=for-the-badge)
-![Status](https://img.shields.io/badge/status-completed-brightgreen?style=for-the-badge)
-![CLI](https://img.shields.io/badge/interface-CLI-purple?style=for-the-badge)
-![License](https://img.shields.io/badge/license-MIT-blue?style=for-the-badge)
+![OOP](https://img.shields.io/badge/Design-Object--Oriented-blue?style=for-the-badge)
+![CLI](https://img.shields.io/badge/Interface-CLI-purple?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Completed-brightgreen?style=for-the-badge)
 
 </div>
 
 ---
 
-## ✦ Overview
+## 📌 Overview
 
 **Hotel Booking System** is a console-based Java application that models the core workflow of a hotel reservation platform.
 
-The system allows customers to explore hotels and room types, check room availability for specific dates, create bookings, process simulated payments, generate booking vouchers, and handle cancellations with refund policies.
+The system allows users to:
 
-The project focuses on translating a real-world booking domain into a **clean object-oriented design**, where each major responsibility is represented by a dedicated class.
+- Explore hotels and room types
+- Check room availability for specific dates
+- Select and book rooms
+- Process simulated payments
+- Generate booking vouchers
+- View booking history
+- Cancel confirmed bookings
+- Calculate refunds according to a cancellation policy
 
-> **The core idea:** a room is not simply "available" or "unavailable" — its availability depends on the requested date range and existing reservations.
+The project focuses on applying **object-oriented design to a real-world booking domain**, with separate classes representing hotels, rooms, customers, bookings, payments, refunds, vouchers, and cancellation policies.
 
 ---
 
-## 🎯 What the System Solves
+## ✨ Features
 
-A hotel room can have multiple bookings over time, but two bookings must not overlap.
+| Feature | Description |
+|---|---|
+| 🏨 Hotel Management | Manage multiple hotels and their rooms |
+| 🛏️ Room Types | Supports Standard, Deluxe, and Suite rooms |
+| 📅 Date-Based Availability | Prevents overlapping reservations |
+| 🔎 Room Selection | Finds available rooms by room type and date |
+| 👤 Customer Management | Maintains customer information and booking history |
+| 🧾 Booking Management | Creates, confirms, displays, and cancels bookings |
+| 💳 Payment Simulation | Supports successful and failed payment scenarios |
+| 🎟️ Voucher Generation | Generates a voucher after successful booking |
+| ❌ Cancellation | Allows confirmed bookings to be cancelled |
+| 💰 Refund Processing | Calculates refunds according to cancellation timing |
+| 🧪 Test Scenarios | Includes seven functional test cases |
 
-For a requested interval:
+---
+
+## 🧠 Core Booking Logic
+
+One of the important parts of the system is **date-based room availability**.
+
+A room cannot be booked if the requested dates overlap with an existing active booking.
+
+The overlap condition is:
 
 ```text
-[Check-in, Check-out)
+checkIn < existingCheckOut
+AND
+checkOut > existingCheckIn
