@@ -2,7 +2,7 @@
 
 # 🏨 Hotel Booking System
 
-### A Java-based hotel reservation system designed with object-oriented principles and real-world booking logic.
+### A Java-based hotel reservation system designed with object-oriented principles and date-aware booking logic.
 
 ![Java](https://img.shields.io/badge/Java-24-orange?style=for-the-badge&logo=openjdk&logoColor=white)
 ![OOP](https://img.shields.io/badge/Design-Object--Oriented-blue?style=for-the-badge)
